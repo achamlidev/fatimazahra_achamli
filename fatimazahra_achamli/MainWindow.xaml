@@ -1,0 +1,55 @@
+﻿<Window x:Class="fatimazahra_achamli.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fatimazahra_achamli"
+        mc:Ignorable="d"
+        Title="Control Continu1" Height="400" Width="500">
+    <Grid RenderTransformOrigin="0.155,0.791">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="71*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="155*"/>
+            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="166*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="value1" Margin="0,0,17,74"/>
+        <TextBox TextWrapping="Wrap" Margin="16,27,41,0" RenderTransformOrigin="0.5,0.5" Height="24" VerticalAlignment="Top" TextChanged="TextBox_TextChanged">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.152"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="value2" Grid.Column="1" Margin="8,0,33,74"/>
+        <TextBox TextWrapping="Wrap" Margin="23,36,48,50" RenderTransformOrigin="0.458,0.427" Grid.Column="1" TextChanged="TextBox_TextChanged_2"/>
+        <Label Content="value3" Grid.Column="2" Margin="0,2,35,75"/>
+        <TextBox TextWrapping="Wrap" Margin="14,30,10,50" RenderTransformOrigin="0.458,0.427" Grid.Column="2" TextChanged="TextBox_TextChanged_1"/>
+        <Slider Margin="26,55,31,19" ValueChanged="Slider_ValueChanged" RenderTransformOrigin="0.469,-0.621"/>
+        <Slider Margin="12,55,56,19" ValueChanged="Slider_ValueChanged" RenderTransformOrigin="1.589,0.571" Grid.Column="2"/>
+        <Slider Margin="29,55,54,19" ValueChanged="Slider_ValueChanged" Grid.Column="1" Minimum="1" Maximum="500" />
+        <TextBlock x:Name="number" Text="#" Margin="26,80,43,140" Grid.RowSpan="2"/>
+        <TextBlock x:Name="number2" Text="#" Margin="29,76,64,2" Grid.Column="1"/>
+        <TextBlock x:Name="number3" Text="#" Margin="14,78,66,0" Grid.Column="2"/>
+        <Button Content="updates" Grid.Column="1" Margin="19,0,18,0" Grid.Row="1" VerticalAlignment="Center" RenderTransformOrigin="0.523,0.85" Height="42" Click="Button_Click"/>
+        <Label Content="updates values:" Grid.Row="1" Margin="26,22,43,71"/>
+
+        <Label Content="value1" Margin="18,10,35,97" Grid.Row="2"/>
+        <Label Content="value2" Margin="18,46,35,61" Grid.Row="2"/>
+        <Label Content="value3" Margin="22,81,31,26" Grid.Row="2"/>
+        <TextBlock TextWrapping="Wrap" Text="" Grid.Column="1" Width="62" Height="23" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,84,0" Grid.Row="2" Background="White" RenderTransformOrigin="-0.405,0.792" />
+        <TextBlock TextWrapping="Wrap" Text="" Grid.Column="1" Width="51.81" Height="25.96" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Row="2" Background="Yellow"/>
+        <TextBlock TextWrapping="Wrap" Text="" Grid.Column="1" Margin="33,71,84,36" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FF0CEF0C" />
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Column="2" Margin="0,21,0,21" Grid.Row="2" HorizontalAlignment="Center" Width="154" SelectionChanged="ListBox_SelectionChanged"/>
+
+
+    </Grid>
+</Window>
